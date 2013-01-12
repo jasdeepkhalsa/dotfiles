@@ -10,17 +10,17 @@ _This example uses Titanium Studio as the sample application_
 1. In shell run the command: `gksudo gedit /usr/share/applications/titanium.desktop`
 2. With the following settings (the important bit is the `%f` in Exec):
 
-	#!/usr/bin/env xdg-open
-	[Desktop Entry]
-	Version=1.0
-	Type=Application
-	Terminal=false
-	Icon[en_GB]=/home/jasdeepharibhajan/Titanium_Studio/icon.xpm
-	Name[en_GB]=titanium
-	Exec=/home/jasdeepharibhajan/Titanium_Studio/TitaniumStudio %f
-	Name=titanium
-	Icon=/home/jasdeepharibhajan/Titanium_Studio/icon.xpm
-	Categories=Motif;Utility;TextTools;
+		#!/usr/bin/env xdg-open
+		[Desktop Entry]
+		Version=1.0
+		Type=Application
+		Terminal=false
+		Icon[en_GB]=/home/jasdeepharibhajan/Titanium_Studio/icon.xpm
+		Name[en_GB]=titanium
+		Exec=/home/jasdeepharibhajan/Titanium_Studio/TitaniumStudio %f
+		Name=titanium
+		Icon=/home/jasdeepharibhajan/Titanium_Studio/icon.xpm
+		Categories=Motif;Utility;TextTools;
 
 3. Find out the mimetype of a file using: mimetype `index.html` (which returns `text/html`)
 4. Add the following entry in `~/.local/share/applications/mimeapps.list` under `[Default Applications]`: `mimetype`=titanium.desktop;
@@ -192,7 +192,7 @@ _(Restart Now)_
 * touch `new.file`
 * cat > `new.file`
 
-	type file contents here
+		type file contents here
 
 _(Press Control + D to complete)_
 
