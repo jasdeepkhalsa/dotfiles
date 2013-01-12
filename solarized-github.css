@@ -1,6 +1,6 @@
-/* Solarized Dark for github.com by https://github.com/jrunning */
-/* Install with Stylish available for Chrome and Firefox here: http://userstyles.org/styles/46850/github-solarized-dark  */
-/* Original File: https://github.com/jrunning/github-solarized/blob/master/solarized-dark.css */
+/* Solarized Dark for github.com by Jasdeep Khalsa @JasdeepKhalsa1 */
+/* Install Stylish available for Chrome and Firefox here: http://userstyles.org/stylish/  */
+/* Adapted from https://github.com/jrunning/github-solarized/blob/master/solarized-dark.css by https://github.com/jrunning */
 .highlight { color: #839496; background-color: #002b36; }
 .highlight .err { color: #dc322f; background-color: #073642; }
 .highlight .cp { color: #586e75; font-weight: bold; }
@@ -26,7 +26,7 @@
 .highlight .k, .highlight .kc, .highlight .kd, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .o, .highlight .ow { font-weight: bold; }
 .highlight .k { color: #859900; }
 .highlight .kt { color: #b58900; }
-.highlight .bp { color: #93a1a1; }
+.highlight .bp { color: #B58900; }
 .highlight .nn { color: #93a1a1; }
 .highlight .nc { color: #b58900; font-weight: bold; }
 .highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .il { color: #2aa198; }
@@ -35,3 +35,4 @@
 .highlight .no { color: #b58900; }
 .highlight .vc, .highlight .vg, .highlight .vi { color: #268bd2; }
 .highlight .ne, .highlight .nf { color: #dc322f; font-weight: bold; }
+.highlight .n { color: #268BD2; }

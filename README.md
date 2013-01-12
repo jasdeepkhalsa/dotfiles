@@ -13,7 +13,7 @@ For customizing the Terminal in Ubuntu I use `bash-it` (https://github.com/revan
 * `commands.md` - lists my most commonly used Ubuntu/Windows commands
 * `.bashrc` - `bash-it` gives a default `.bash_profile` file but this is actually named `.bashrc` in Ubuntu
 * `solarized.theme.bash` - my work-in-progress shell theme based off the default theme `bobby`. Create a new folder `solarized` under `~/.bash_it/themes/` and add this file to it.
-* `solarized-github.css` - code highlighting for GitHub using [Stylish](http://userstyles.org/styles/46850/github-solarized-dark)
+* `solarized-github.css` - code highlighting for GitHub using [Stylish](http://userstyles.org/stylish/). Install Stylish, create a new theme, paste in this css and add `github.com` as the domain. Bingo!
 * `titanium.desktop` - my shortcut for `Titanium Studio`. Please add under `/usr/share/applications/` (after changing the paths to yours!)
 * `mimeapps.list` - tells Ubuntu which applications to associate with which file types. In this case I've associated .php, .css, .js, .txt to `Titanium Studio`. Add under `~/.local/share/applications/` making sure to backup your existing `mimeapps.list` file
 
