@@ -23,11 +23,11 @@ _This example uses Titanium Studio as the sample application_
 		Categories=Motif;Utility;TextTools;
 
 3. Find out the mimetype of a file using: mimetype `index.html` (which returns `text/html`)
-4. Add the following entry in `~/.local/share/applications/mimeapps.list` under `[Default Applications]`: `mimetype`=titanium.desktop;
+4. Add the following entry in `~/.local/share/applications/mimeapps.list` under `[Default Applications]`: `text/html`=`titanium.desktop`;
 5. Turn off option on any php file set to `Allow executing file as program` under `Properties`
 
 ## LOADING A SCRIPT ON STARTUP ##
-* sudo mv /filename /etc/init.d/
+* sudo mv /`filename` /etc/init.d/
 * sudo chmod +x /etc/init.d/`filename`
 * sudo update-rc.d /etc/init.d/`filename` defaults
 
@@ -42,7 +42,7 @@ _This example uses Titanium Studio as the sample application_
 * sudo /etc/fstab
 * mount
 
-## MYSQL (Shell) - Commands in MySQL end in ; or \g, e.g. quit; ##
+## MySQL (Shell) - Commands in MySQL end in ; or \g, e.g. quit; ##
 * `C:\xampp\mysql\bin\mysqldump`.exe -u root `database` `table` > `output.sql`
 * `C:\xampp\mysql\bin\mysql`.exe -u root `database` < `output.sql`
 * `C:\xampp\mysql\bin\mysqldump`.exe -u`database` -h`hostname` -p`password` `username` `table` -w"`field`=`value`" > `output.sql`
@@ -56,6 +56,7 @@ _This example uses Titanium Studio as the sample application_
 
 ## IMPORT CSV INTO MYSQL ##
 _Note: First ensure the table and fields already exist in MySQL_
+
 _Make sure you know what the line ending is either \n for UNIX or \r\n for Windows_
 
 1. cd to `dir` of the `all`.csv file
