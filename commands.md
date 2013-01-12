@@ -42,17 +42,19 @@ _This example uses Titanium Studio as the sample application_
 * sudo /etc/fstab
 * mount
 
-## MySQL (Shell) - Commands in MySQL end in ; or \g, e.g. quit; ##
+## USING MYSQL AND MYSQLDUMP COMMANDLINE `Windows/DOS` ##
+_Commands in MySQL end in ; or \g, e.g. quit;_
+
 * `C:\xampp\mysql\bin\mysqldump`.exe -u root `database` `table` > `output.sql`
 * `C:\xampp\mysql\bin\mysql`.exe -u root `database` < `output.sql`
 * `C:\xampp\mysql\bin\mysqldump`.exe -u`database` -h`hostname` -p`password` `username` `table` -w"`field`=`value`" > `output.sql`
 
-## FIND AND REPLACE DATA IN MYSQL ##
-* update `table_name` set `field_name` = replace(`field_name`,'`string_to_find`','`string_to_replace`');
-
 ## COMBINE MULTIPLE CSVs INTO ONE FILE `Windows/DOS` ##
 * cd `dir`
 * copy \*.csv `all`.csv
+
+## FIND AND REPLACE DATA IN MYSQL ##
+* update `table_name` set `field_name` = replace(`field_name`,'`string_to_find`','`string_to_replace`');
 
 ## IMPORT CSV INTO MYSQL ##
 _Note: First ensure the table and fields already exist in MySQL_
