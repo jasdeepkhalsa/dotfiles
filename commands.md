@@ -1,4 +1,4 @@
-### Commands ###
+# Commands #
 
 ## USING YUI COMPRESSOR (AFTER COMPILING WITH ANT) ##
 * java -jar `./path/to/yuicompressor-2.4.7.jar` -o '.js$:-min.js' `./js/*.js`
