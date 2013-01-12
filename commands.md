@@ -6,6 +6,7 @@ java -jar `./path/to/yuicompressor-2.4.7.jar` -o '.css$:-min.css' `./css/*.css`
 
 ## ADDING APP TO THE ‘OPEN WITH’ DIALOG ##
 _This example uses Titanium Studio as the sample application_
+
 1. In shell run the command: `gksudo gedit /usr/share/applications/titanium.desktop`
 2. With the following settings (the important bit is the %f in Exec):
 	#!/usr/bin/env xdg-open
