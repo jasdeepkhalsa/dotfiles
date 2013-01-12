@@ -43,7 +43,7 @@ _This example uses Titanium Studio as the sample application_
 ## MYSQL (Shell) - Commands in MySQL end in ; or \g, e.g. quit; ##
 * `C:\xampp\mysql\bin\mysqldump`.exe -u root `database` `table` > `output.sql`
 * `C:\xampp\mysql\bin\mysql`.exe -u root `database` < `output.sql`
-* `C:\xampp\mysql\bin\mysqldump`.exe -u`database` -h`hostname` -p`password` `username` `table` -w"field=value" > `output.sql`
+* `C:\xampp\mysql\bin\mysqldump`.exe -u`database` -h`hostname` -p`password` `username` `table` -w"`field`=`value`" > `output.sql`
 
 ## FIND AND REPLACE DATA IN MYSQL ##
 * update `table_name` set `field_name` = replace(`field_name`,'`string_to_find`','`string_to_replace`');

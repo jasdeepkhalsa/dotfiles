@@ -3,11 +3,11 @@ A list of my most commonly used Ubuntu/Windows commands and files.
 
 The main OS I work with is Ubuntu and ∴ the majority of the commands are Linux/Debian specific.
 
-My main editor is `[Titanium Studio]`(http://www.appcelerator.com/platform/titanium-studio/) by Appcelerator which I have found to be superior to both `Sublime Text 2` and JetBrains' `WebStorm` due to it being cross-platform (Windows, Linux and Mac), having fantastic built-in support for `SSH` remote editing of files (which I use on a daily basis), `Node.js`, `Git`, `Shell` (yes, even on Windows!) and being free open source software.
+My main editor is `Titanium Studio` (http://www.appcelerator.com/platform/titanium-studio/) by Appcelerator which I have found to be superior to both `Sublime Text 2` and JetBrains' `WebStorm` due to it being cross-platform (Windows, Linux and Mac), having fantastic built-in support for `SSH` remote editing of files (which I use on a daily basis), `Node.js`, `Git`, `Shell` (yes, even on Windows!) and being free open source software.
 
-My secondary editor (for editing text and shell files) is `[geany]`(http://www.geany.org/).
+My secondary editor (for editing text and shell files) is `geany` (http://www.geany.org/).
 
-For customizing the Terminal in Ubuntu I use `[bash-it]`(https://github.com/revans/bash-it).
+For customizing the Terminal in Ubuntu I use `bash-it` (https://github.com/revans/bash-it).
 
 ### Contents ###
 * `commands.md` - lists my most commonly used Ubuntu/Windows commands
