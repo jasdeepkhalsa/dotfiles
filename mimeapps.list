@@ -1,0 +1,35 @@
+
+[Default Applications]
+x-scheme-handler/http=google-chrome.desktop;
+x-scheme-handler/https=google-chrome.desktop;
+text/html=google-chrome.desktop;
+x-scheme-handler/about=google-chrome.desktop;
+x-scheme-handler/unknown=google-chrome.desktop;
+x-scheme-handler/webcal=google-chrome.desktop;
+x-scheme-handler/mailto=google-chrome.desktop;
+audio/x-vorbis+ogg=totem.desktop;
+image/jpeg=shotwell-viewer.desktop;
+application/x-php=titanium.desktop;
+application/x-genesis-rom=titanium.desktop;
+text/plain=titanium.desktop;
+application/javascript=titanium.desktop;
+text/css=titanium.desktop;
+
+[Added Associations]
+x-scheme-handler/http=google-chrome.desktop;
+x-scheme-handler/https=google-chrome.desktop;
+text/x-python=titanium.desktop;geany.desktop;
+application/pdf=libreoffice-writer.desktop;
+application/x-python-bytecode=titanium.desktop;geany.desktop;
+image/vnd.adobe.photoshop=inkscape.desktop;
+image/png=inkscape.desktop;
+image/svg+xml=inkscape.desktop;
+application/octet-stream=inkscape.desktop;gedit.desktop;geany.desktop;
+audio/AMR=totem.desktop;banshee.desktop;
+image/jpeg=inkscape.desktop;shotwell-viewer.desktop;
+audio/x-vorbis+ogg=totem.desktop;
+application/x-php=titanium.desktop;geany.desktop;
+application/x-sharedlib=geany.desktop;
+application/epub+zip=FBReader.desktop;
+application/x-genesis-rom=titanium.desktop;geany.desktop;
+text/plain=titanium.desktop;
