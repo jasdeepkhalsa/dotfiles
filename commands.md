@@ -2,7 +2,6 @@
 
 ## USING YUI COMPRESSOR (AFTER COMPILING WITH ANT) ##
 java -jar `./path/to/yuicompressor-2.4.7.jar` -o '.js$:-min.js' `./js/*.js
-
 java -jar `./path/to/yuicompressor-2.4.7.jar` -o '.css$:-min.css' `./css/*.css`
 
 ## ADDING APP TO THE ‘OPEN WITH’ DIALOG ##
@@ -30,9 +29,7 @@ _This example uses Titanium Studio as the sample application_
 
 ## LOADING A SCRIPT ON STARTUP ##
 sudo mv /filename /etc/init.d/
-
 sudo chmod +x /etc/init.d/`filename`
-
 sudo update-rc.d /etc/init.d/`filename` defaults
 
 [Read more on init scripts](http://wiki.debian.org/LSBInitScripts)
@@ -42,11 +39,8 @@ ALT + F2
 
 ## REMOUNT FILE SYSTEM / FIND UUID / EDIT MOUNTS / LIST DEVICES ##
 sudo mount -o remount /
-
 ls -l /dev/disk/by-uuid/
-
 sudo /etc/fstab
-
 mount
 
 ## MYSQL (Shell) - Commands in MySQL end in ; or \g, e.g. quit; ##
@@ -61,12 +55,10 @@ update `table_name` set `field_name` = replace(`field_name`,'`string_to_find`','
 
 ## COMBINE MULTIPLE CSVs INTO ONE FILE `Windows/DOS` ##
 cd `dir`
-
 copy \*.csv `all`.csv
 
 ## IMPORT CSV INTO MYSQL ##
 _Note: First ensure the table and fields already exist in MySQL_
-
 _Make sure you know what the line ending is either \n for UNIX or \r\n for Windows_
 
 1. cd to `dir` of the `all`.csv file
@@ -83,40 +75,29 @@ _Make sure you know what the line ending is either \n for UNIX or \r\n for Windo
 
 ## GREP FOR FINDING INFO ##
 grep --before-context=3 --after-context=3 -i `search text` *
-
 grep -l -i `search text` *
 
 ## CONFIGURING A PACKAGE ##
 _(First cd to the directory of the package)_
 
 ./configure
-
 make
-
 make install
 
 ## NODE INSTALLING & CHECKING VERSIONS ##
 npm install `package` -g
-
 npm version
-
 npm ls
-
 npm shrinkwrap
-
 npm install
 
 ## GIT REPOSITORY UPDATE & SUBMIT ##
 _(First cd to the directory of the package)_
 
 git init _(only use once to setup git repo)_
-
 git add . **or** git add `file`
-
 git commit -m `"this is my messsage"`
-
 git remote add origin `https://github.com/username/Hello-World.git`
-
 git push origin master
 
 ## REMOVE FILE FROM GIT ##
@@ -134,20 +115,14 @@ git push heroku master
 _(First cd to the directory of the app)_
 
 gem install af
-
 af login
-
 af update `appname`
 
 ## MONGODB - CHECKING STATUS AND RESTARTING ##
 sudo status mongodb
-
 sudo rm /var/lib/mongodb/mongod.lock
-
 sudo -u mongodb mongod -f /etc/mongodb.conf --repair
-
 sudo start mongodb
-
 mongo `test`
 
 ## PUSHING A LOCAL FILE TO A REMOTE SERVER ##
@@ -160,7 +135,6 @@ sudo find /path/to/directory -type f -print0 | xargs -0 sudo chmod 644
 _(First navigate to the parent directory)_
 
 sudo chmod 755 `folder` -R
-
 sudo find `/path/to/directory` -type d -print0 | xargs -0 sudo chmod 755
 
 ## INSTALLING SOFTWARE ##
@@ -168,11 +142,8 @@ sudo apt-get install `inkscape`
 
 ## LIST NETWORKING HARDWARE ##
 sudo lshw -C network
-
 lsmod
-
 ifconfig -a
-
 iwconfig
 
 ## SOLVING SLOW INTERNET SPEED PROBLEM (Ubuntu 10 - 11) ##
@@ -185,13 +156,9 @@ _(Where "iwl3945" is the wireless driver, found with sudo lshw -C network)_
 sudo a2dissite `default` && sudo a2ensite `mysite`
 
 sudo service apache2 start
-
 sudo service apache2 stop
-
 sudo service apache2 restart
-
 sudo service mysql start
-
 sudo service mysql stop
 
 ## SSH SECURE SHELL ##
@@ -205,11 +172,9 @@ killall -9 `appname/process name`
 
 ## SCHEDULED SHUTDOWN/RESTART (24 Hour Clock) ##
 _(Shutdown at HH:MM)_
-
 sudo shutdown -P `HH:MM`
 
 _(Restart Now)_
-
 sudo shutdown -r now
 
 ## COPYING A DIRECTORY ##
@@ -223,20 +188,15 @@ mv `test` `hope`
 
 ## CREATING A FILE ##
 touch `new.file`
-
 cat > `new.file`
-
 `type file contents here`
 
 _(Press Control + D to complete)_
 
 ## UNZIP/UNRAR/UNTAR ##
 unzip `file`.zip
-
 unrar e `file`.rar
-
 tar xvf `something`.tar
-
 tar xvfz `something`.tar.gz
 
 ## AVG ##
