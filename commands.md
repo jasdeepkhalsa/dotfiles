@@ -9,7 +9,7 @@ _This example uses Titanium Studio as the sample application_
 
 1. In shell run the command: `gksudo gedit /usr/share/applications/titanium.desktop`
 2. With the following settings (the important bit is the `%f` in Exec):
-		#!/usr/bin/env xdg-open
+        #!/usr/bin/env xdg-open
         [Desktop Entry]
         Version=1.0
         Type=Application
