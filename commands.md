@@ -9,6 +9,7 @@ _This example uses Titanium Studio as the sample application_
 
 1. In shell run the command: `gksudo gedit /usr/share/applications/titanium.desktop`
 2. With the following settings (the important bit is the `%f` in Exec):
+
 	#!/usr/bin/env xdg-open
 	[Desktop Entry]
 	Version=1.0
@@ -20,6 +21,7 @@ _This example uses Titanium Studio as the sample application_
 	Name=titanium
 	Icon=/home/jasdeepharibhajan/Titanium_Studio/icon.xpm
 	Categories=Motif;Utility;TextTools;
+
 3. Find out the mimetype of a file using: mimetype `index.html` (which returns `text/html`)
 4. Add the following entry in `~/.local/share/applications/mimeapps.list` under `[Default Applications]`: `mimetype`=titanium.desktop;
 5. Turn off option on any php file set to `Allow executing file as program` under `Properties`
@@ -58,11 +60,11 @@ _Make sure you know what the line ending is either \n for UNIX or \r\n for Windo
 
 1. cd to `dir` of the `all`.csv file
 2. Add the following into `all.sql` file:
-
-	load data local infile 'all.csv' into table tblTable fields terminated by ','
-	enclosed by '"'
-	lines terminated by '\r\n'
-	(field1, field2, field3)
+	
+		load data local infile 'all.csv' into table tblTable fields terminated by ','
+		enclosed by '"'
+		lines terminated by '\r\n'
+		(field1, field2, field3)
 
 3. Load MySQL Shell and run command: use `database`; _(Don't forget the trailing semi-colon ;)_
 4. Run command `.\ all.sql` **or** `source all.sql`
@@ -123,10 +125,14 @@ _(First cd to the directory of the app)_
 ## PUSHING A LOCAL FILE TO A REMOTE SERVER ##
 * scp `file.zip` `username`@`hostname.com`:`/path/on/server/`
 
-## CHMOD FILES UNDER A DIRECTORY TO 644 (-RW-R--R--) (no sudo on some hosting providers) ##
-* sudo find /path/to/directory -type f -print0 | xargs -0 sudo chmod 644
+## CHMOD FILES UNDER A DIRECTORY TO 644 (-RW-R--R--) ##
+_(No sudo on some hosting providers)_
 
-## CHMOD DIRECTORIES UNDER A DIRECTORY TO 755 (DRWXR-XR-X) (includes directory) (no sudo on some hosting providers) ##
+* sudo find `/path/to/directory` -type f -print0 | xargs -0 sudo chmod 644
+
+## CHMOD DIRECTORIES UNDER A DIRECTORY TO 755 (DRWXR-XR-X) (includes directory) ##
+_(No sudo on some hosting providers)_
+
 _(First navigate to the parent directory)_
 
 * sudo chmod 755 `folder` -R
