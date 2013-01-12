@@ -94,6 +94,8 @@ _(First cd to the directory of the package)_
 ## GIT REPOSITORY UPDATE & SUBMIT ##
 _(First cd to the directory of the package)_
 
+_(Please note that this default setup uses HTTPS not SSH, and therefore you will have to enter your username and password each time you push. If you don't want to do this then add the SSH origin as follows: git@github.com:username/repo.git)_
+
 * git init _(only use once to setup git repo)_
 * git add . **or** git add `file`
 * git commit -m `"this is my messsage"`
@@ -104,7 +106,24 @@ _(First cd to the directory of the package)_
 * git rm --cached `file`
 
 ## CHANGE GIT REPO NAME & URL ##
-* .git/config **or** git remote set-url origin `git://new.url.here`
+_(Git does not care what your folder in which you store your git repo is called but to change the repo's name, if you delete your old repo on GitHub then you can do the following)_
+
+1. First rename your existing folder to your new repo name
+2. Edit `.git/config` and change the name
+3. Update the remote origin (example uses SSH): `git remote set-url origin git@github.com:username/repo.git`
+
+## NOT HAVING TO ENTER USERNAME AND PASSWORD FOR GIT (BY USING SSH INSTEAD OF HTTPS) ##
+1. Generate a new SSH key: `ssh-keygen -t rsa -C "your_email@youremail.com"`
+2. Enter a passphrase when asked the question `Enter passphrase`
+3. Install xclip for copying the SSH key: `sudo apt-get install xclip`
+4. Copy the key using xclip: `xclip -sel clip < ~/.ssh/id_rsa.pub`
+5. Go to [GitHub Settings](https://github.com/settings), click `SSH Keys` and paste in your key **without** any extra lines
+6. Now in Terminal/Shell type the following `ssh -T git@github.com`, click yes to any warning and it should say:
+
+		Hi _username_! You've successfully authenticated, but GitHub does not provide shell access.
+		
+7. Then `cd` back to your repo and update the remote origin to use SSH: `git remote set-url origin git@github.com:username/repo.git`
+8. Do a `commit` and `push` it to test if it works! 
 
 ## UPDATE HEROKU APP ##
 _(First commit files to git and then...)_
