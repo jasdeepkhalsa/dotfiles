@@ -45,9 +45,11 @@ _This example uses Titanium Studio as the sample application_
 ## USING MYSQL AND MYSQLDUMP COMMANDLINE `Windows/DOS` ##
 _Commands in MySQL end in ; or \g, e.g. quit;_
 
-* `C:\xampp\mysql\bin\mysqldump`.exe -u root `database` `table` > `output.sql`
-* `C:\xampp\mysql\bin\mysql`.exe -u root `database` < `output.sql`
-* `C:\xampp\mysql\bin\mysqldump`.exe -u`database` -h`hostname` -p`password` `username` `table` -w"`field`=`value`" > `output.sql`
+_If you are having problems importing / exporting - double check your mysql username, password and hostname_
+
+* `C:\xampp\mysql\bin\mysqldump`.exe -u root -h `hostname` `database` `table` > `output.sql`
+* `C:\xampp\mysql\bin\mysql`.exe -u root -h `hostname` `database` < `output.sql`
+* `C:\xampp\mysql\bin\mysqldump`.exe -u `username` -h`hostname` -p`password` `database` `table` -w"`field`=`value`" > `output.sql`
 
 ## COMBINE MULTIPLE CSVs INTO ONE FILE `Windows/DOS` ##
 * cd `dir`
