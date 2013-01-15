@@ -56,6 +56,14 @@ _The more-than symbol (>) denotes output, the less-than symbol (<) denotes input
 ### IMPORT SQL file with mysql ###
 * `C:\xampp\mysql\bin\`mysql`.exe` -u `root` -p`password` -h `hostname` `database` < `output.sql`
 
+## CONNECT TO A MYSQL SERVER REMOTELY ##
+_First login to the MySQL command-line_
+
+### Create a User ###
+* mysql> CREATE USER '`username`'@'%' IDENTIFIED BY '`password`';
+
+### Grant a User Privileges ###
+* mysql> GRANT ALL PRIVILEGES ON `database`.* TO '`username`'@'%' WITH GRANT OPTION;
 
 ## COMBINE MULTIPLE CSVs INTO ONE FILE `Windows/DOS` ##
 * cd `dir`
@@ -86,7 +94,7 @@ _Make sure you know what the line ending is either \n for UNIX or \r\n for Windo
 * grep -l -i `search text` *
 
 ## CONFIGURING A PACKAGE ##
-_(First cd to the directory of the package)_
+_First cd to the directory of the package_
 
 * ./configure
 * make
@@ -100,7 +108,7 @@ _(First cd to the directory of the package)_
 * npm install
 
 ## GIT REPOSITORY UPDATE & SUBMIT ##
-_(First cd to the directory of the package)_
+_First cd to the directory of the package_
 
 _(Please note that this default setup uses HTTPS not SSH, and therefore you will have to enter your username and password each time you push. If you don't want to do this then add the SSH origin as follows: git@github.com:username/repo.git)_
 
@@ -114,7 +122,7 @@ _(Please note that this default setup uses HTTPS not SSH, and therefore you will
 * git rm --cached `file`
 
 ## CHANGE GIT REPO NAME & URL ##
-_(Git does not care what your folder in which you store your git repo is called but to change the repo's name, if you delete your old repo on GitHub then you can do the following)_
+_Git does not care what your folder in which you store your git repo is called but to change the repo's name, if you delete your old repo on GitHub then you can do the following_
 
 1. First rename your existing folder to your new repo name
 2. Edit `.git/config` and change the name
@@ -134,12 +142,12 @@ _(Git does not care what your folder in which you store your git repo is called 
 8. Do a `commit` and `push` it to test if it works! 
 
 ## UPDATE HEROKU APP ##
-_(First commit files to git and then...)_
+_First commit files to git and then..._
 
 * git push heroku master
 
 ## UPDATE APPFOG APP ##
-_(First cd to the directory of the app)_
+_First cd to the directory of the app_
 
 * gem install af
 * af login
@@ -156,14 +164,14 @@ _(First cd to the directory of the app)_
 * scp `file.zip` `username`@`hostname.com`:`/path/on/server/`
 
 ## CHMOD FILES UNDER A DIRECTORY TO 644 (-RW-R--R--) ##
-_(No sudo on some hosting providers)_
+_No sudo on some hosting providers_
 
 * sudo find `/path/to/directory` -type f -print0 | xargs -0 sudo chmod 644
 
 ## CHMOD DIRECTORIES UNDER A DIRECTORY TO 755 (DRWXR-XR-X) (includes directory) ##
-_(No sudo on some hosting providers)_
+_No sudo on some hosting providers_
 
-_(First navigate to the parent directory)_
+_First navigate to the parent directory_
 
 * sudo chmod 755 `folder` -R
 * sudo find `/path/to/directory` -type d -print0 | xargs -0 sudo chmod 755
@@ -178,7 +186,7 @@ _(First navigate to the parent directory)_
 * iwconfig
 
 ## SOLVING SLOW INTERNET SPEED PROBLEM (Ubuntu 10 - 11) ##
-_(Where "iwl3945" is the wireless driver, found with sudo lshw -C network)_
+_Where "iwl3945" is the wireless driver, found with sudo lshw -C network_
 
 1. gksudo geany /etc/modprobe.d/iwl3945.conf **or** gksudo geany /etc/modprobe.d/iwl3945-disable11n.conf
 2. options iwl3945 disable_hw_scan=0 **or** options iwl3945 11n_disable=1
@@ -201,11 +209,11 @@ _(Where "iwl3945" is the wireless driver, found with sudo lshw -C network)_
 * killall -9 `appname/process name`
 
 ## SCHEDULED SHUTDOWN/RESTART (24 Hour Clock) ##
-_(Shutdown at HH:MM)_
+_Shutdown at HH:MM_
 
 * sudo shutdown -P `HH:MM`
 
-_(Restart Now)_
+_Restart Now_
 
 * sudo shutdown -r now
 
@@ -224,7 +232,7 @@ _(Restart Now)_
 
 		type file contents here
 
-_(Press Control + D to complete)_
+_Press Control + D to complete_
 
 ## UNZIP/UNRAR/UNTAR ##
 * unzip `file`.zip
@@ -243,7 +251,7 @@ _(Press Control + D to complete)_
 * avgvvctl
 
 ## LOCAL TO REMOTE SYNC ##
-* rsync --progress --ignore-times --delete -rvz `/localdir/files/` `username`@`mydomain.com`:`/remotedir/files/`
+		rsync --progress --ignore-times --delete -rvz `/localdir/files/` `username`@`mydomain.com`:`/remotedir/files/`
 
 ## REMOTE TO LOCAL SYNC ##
-* rsync --progress --ignore-times --delete -rvz `username`@`mydomain.com`:`/remotedir/files/` `/localdir/files/`
+		rsync --progress --ignore-times --delete -rvz `username`@`mydomain.com`:`/remotedir/files/` `/localdir/files/`
