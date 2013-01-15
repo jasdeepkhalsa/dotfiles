@@ -47,9 +47,9 @@ _Commands in MySQL end in ; or \g, e.g. quit;_
 
 _If you are having problems importing / exporting - double check your mysql username, password and hostname_
 
-* `C:\xampp\mysql\bin\mysqldump`.exe -u root -h `hostname` `database` `table` > `output.sql`
-* `C:\xampp\mysql\bin\mysql`.exe -u root -h `hostname` `database` < `output.sql`
-* `C:\xampp\mysql\bin\mysqldump`.exe -u `username` -h`hostname` -p`password` `database` `table` -w"`field`=`value`" > `output.sql`
+* `C:\xampp\mysql\bin\`mysqldump`.exe` -u `root` -p`password` -h `hostname` `database` `table` > `output.sql`
+* `C:\xampp\mysql\bin\`mysql`.exe` -u `root` -p`password` -h `hostname` `database` < `output.sql`
+* `C:\xampp\mysql\bin\`mysqldump`.exe` -u `root` -p`password` -h `hostname` `database` `table` -w"`field`=`value`" > `output.sql`
 
 ## COMBINE MULTIPLE CSVs INTO ONE FILE `Windows/DOS` ##
 * cd `dir`
