@@ -1,5 +1,76 @@
 # Commands #
 
+## FIND OUT WHERE SH OR BASH IS LOCATED FOR SHELL SCRIPTS ##
+* which sh
+* which bash
+
+_Outputs something like /bin/sh or /bin/bash to use with a shebang (#!) in a shell script e.g. "#!/bin/sh"_
+
+## COMPRESSING FILES ##
+
+### ZIP/TAR ###
+* zip `output`.zip `input.txt`
+* tar czf `output`.tar.gz `input.txt`
+
+### UNZIP/UNRAR/UNTAR ###
+* unzip `file`.zip
+* unrar e `file`.rar
+* tar xvf `something`.tar
+* tar xvfz `something`.tar.gz
+
+## USING SUBVERSION (SVN) ##
+_Please note: examples are just for http:// or https:// accessible repos_
+
+_First cd to the parent directory_
+
+### IMPORT INITIAL FILES INTO REPO ###
+_This exports files from your computer and imports them into SVN on the server_
+
+_Please note: after exporting your files you still MUST create a working copy of the repo by pulling it down using the "svn checkout" command described below_
+
+* svn import . `https://svn.domain.co.uk/project/` -m "`initial import`"
+
+### LIST FILES IN REPO ###
+
+* svn list `https://svn.domain.co.uk/project/`
+
+### CREATE A WORKING COPY OF THE SVN REPO ###
+_cd to the directory you want to create the working repo in_
+
+* svn checkout `https://svn.domain.co.uk/project/` `foldername`
+
+_This will create a directory called "foldername" inside the current directory_
+
+### EXPORT THE SVN REPO TO A WEB DIRECTORY ###
+_Overwrites the public folder using the "--force" command_
+
+_Note: SVN always requires a protocol. This example uses the "https://" protocol, but "http://", "svn://" and "svn+ssh://" are all supported for remote repos_
+
+* svn export `https://svn.domain.co.uk/project/` `/home/user/public/` --force
+
+_Or alternatively for exporting local repos to a local folder use the "file://" protocol:_
+
+* svn export `file://$HOME/svn/project/` `$HOME/staging.website.co.uk/` --force
+
+### CREATE SVN POST COMMIT HOOK FOR AUTOMATIC DEPLOYMENT TO STAGING/LIVE SERVER ###
+* In the `svn` root directory navigate to the `hooks` folder
+* Find the file `post-commit.tmpl` and edit it by adding some shell commands! For example:
+
+        #!/bin/sh
+    
+        REPOS="$1"
+        REV="$2"
+    
+        svn export $REPOS /home/user/public --force
+    
+* You will want to save the file as `post-commit` and ensure its permissions are 755 with:
+
+    	chmod 755 post-commit
+    
+* You will also want to ensure that the file's owner is your username and not someone else's!
+
+* If this does not work check to make sure the $REPOS path is correct or use a hard coded path with the `file://` protocol if you only have one repo e.g. `file://$HOME/svn/project/`
+
 ## USING YUI COMPRESSOR (AFTER COMPILING WITH ANT) ##
 * java -jar `./path/to/yuicompressor-2.4.7.jar` -o '.js$:-min.js' `./js/*.js`
 * java -jar `./path/to/yuicompressor-2.4.7.jar` -o '.css$:-min.css' `./css/*.css`
@@ -234,12 +305,6 @@ _Restart Now_
 
 _Press Control + D to complete_
 
-## UNZIP/UNRAR/UNTAR ##
-* unzip `file`.zip
-* unrar e `file`.rar
-* tar xvf `something`.tar
-* tar xvfz `something`.tar.gz
-
 ## AVG ##
 * avgcfgctl
 * avgctl
@@ -251,7 +316,7 @@ _Press Control + D to complete_
 * avgvvctl
 
 ## LOCAL TO REMOTE SYNC ##
-		rsync --progress --ignore-times --delete -rvz `/localdir/files/` `username`@`mydomain.com`:`/remotedir/files/`
+* rsync --progress --ignore-times --delete -rvz `/localdir/files/` `username`@`mydomain.com`:`/remotedir/files/`
 
 ## REMOTE TO LOCAL SYNC ##
-		rsync --progress --ignore-times --delete -rvz `username`@`mydomain.com`:`/remotedir/files/` `/localdir/files/`
+* rsync --progress --ignore-times --delete -rvz `username`@`mydomain.com`:`/remotedir/files/` `/localdir/files/`
