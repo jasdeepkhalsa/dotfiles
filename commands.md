@@ -1,8 +1,9 @@
 # Commands #
 
-## FIND OUT WHERE SH OR BASH IS LOCATED FOR SHELL SCRIPTS ##
+## FIND OUT WHERE SH, BASH OR SVN IS LOCATED FOR SHELL SCRIPTS ##
 * which sh
 * which bash
+* which svn
 
 _Outputs something like /bin/sh or /bin/bash to use with a shebang (#!) in a shell script e.g. "#!/bin/sh"_
 
