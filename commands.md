@@ -128,6 +128,9 @@ _The more-than symbol (>) denotes output, the less-than symbol (<) denotes input
 ### IMPORT SQL file with mysql ###
 * `C:\xampp\mysql\bin\`mysql`.exe` -u `root` -p`password` -h `hostname` `database` < `output.sql`
 
+## CHANGE MYSQL PASSWORD ##
+* mysqladmin -u `username` -p'`oldpassword`' password '`newpassword`'
+
 ## CONNECT TO A MYSQL SERVER REMOTELY ##
 _First login to the MySQL command-line_
 
@@ -270,6 +273,13 @@ _Where "iwl3945" is the wireless driver, found with sudo lshw -C network_
 * sudo service apache2 restart
 * sudo service mysql start
 * sudo service mysql stop
+
+## APACHE ENABLE MODULES ##
+* sudo a2enmod `module`
+
+## APACHE ACCESS & ERROR LOG ##
+* tail -f  /var/log/apache2/error.log
+* tail -f  /var/log/apache2/access.log
 
 ## SSH SECURE SHELL ##
 * ssh -l `username` `hostname`
