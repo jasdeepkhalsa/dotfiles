@@ -124,6 +124,10 @@ _The more-than symbol (>) denotes output, the less-than symbol (<) denotes input
 ### EXPORT SQL file with mysqldump ###
 * `C:\xampp\mysql\bin\`mysqldump`.exe` -u `root` -p`password` -h `hostname` `database` `table` > `output.sql`
 * `C:\xampp\mysql\bin\`mysqldump`.exe` -u `root` -p`password` -h `hostname` `database` `table` -w"`field`=`value`" > `output.sql`
+* --skip-add-drop-table
+* --skip-comments
+* --no-create-info _or_ -t
+* --no-data _or_ -d
 
 ### IMPORT SQL file with mysql ###
 * `C:\xampp\mysql\bin\`mysql`.exe` -u `root` -p`password` -h `hostname` `database` < `output.sql`
