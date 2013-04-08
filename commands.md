@@ -7,6 +7,34 @@
 
 _Outputs something like /bin/sh or /bin/bash to use with a shebang (#!) in a shell script e.g. "#!/bin/sh"_
 
+## RUN PHP INLINE ON THE COMMAND-LINE ##
+* php -r 'echo "`Hello World`";'
+
+## INSTALL PHPUNIT & RUN UNIT TESTS ##
+
+* `cd` to the root of your application
+* Install [Composer](http://getcomposer.org/) by downloading `composer.phar`
+* Create a `composer.json` file in the root:
+
+    	{
+          "require-dev": {
+              "phpunit/phpunit": "3.7.*",
+              "phpunit/dbunit": ">=1.2",
+              "phpunit/phpunit-selenium": ">=1.2"
+          },
+          "autoload": {
+              "psr-0": {
+                  "ApplicationNamespace": "lib/"
+              }
+          }
+    	}
+
+
+* Replace `ApplicationNamespace` with the `namespace` of your application
+* Replace `lib/` with the folder with all your classes inside it
+* Run: `php composer.phar update`
+* Run: `./vendor/bin/phpunit tests_directory`
+
 ## COMPRESSING FILES ##
 
 ### ZIP/TAR ###
