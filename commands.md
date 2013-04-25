@@ -7,6 +7,9 @@
 
 _Outputs something like /bin/sh or /bin/bash to use with a shebang (#!) in a shell script e.g. "#!/bin/sh"_
 
+## RUN WEBCAM - LOAD VIDEO MODULE ##
+* `sudo modprobe uvcvideo`
+
 ## RUN PHP INLINE ON THE COMMAND-LINE ##
 * php -r 'echo "`Hello World`";'
 
