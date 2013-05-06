@@ -212,10 +212,10 @@ _First cd to the directory of the package_
 
 ## NODE INSTALLING & CHECKING VERSIONS ##
 * npm install `package` -g
+* npm install `package` --save
 * npm version
 * npm ls
 * npm shrinkwrap
-* npm install
 
 ## GIT REPOSITORY UPDATE & SUBMIT ##
 _First cd to the directory of the package_
