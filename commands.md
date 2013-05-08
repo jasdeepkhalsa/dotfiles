@@ -1,4 +1,6 @@
 # Commands #
+## CREATE AN ALIAS OF A COMMAND (LINUX) ##
+* alias `alias`='`command`'
 
 ## FIND OUT WHERE SH, BASH OR SVN IS LOCATED FOR SHELL SCRIPTS ##
 * which sh
