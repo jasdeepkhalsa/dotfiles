@@ -86,6 +86,9 @@ _Or alternatively for exporting local repos to a local folder use the "file://" 
 
 * svn export `file://$HOME/svn/project/` `$HOME/staging.website.co.uk/` --force
 
+### FIND CHANGES TO A FILE BETWEEN PREVIOUS AND CURRENT REVISION ###
+* svn diff -r PREV:COMMITTED `file`
+
 ### CREATE SVN POST COMMIT HOOK FOR AUTOMATIC DEPLOYMENT TO STAGING/LIVE SERVER ###
 * In the `svn` root directory navigate to the `hooks` folder
 * Find the file `post-commit.tmpl` and edit it by adding some shell commands! For example:
