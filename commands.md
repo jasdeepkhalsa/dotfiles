@@ -230,9 +230,11 @@ _(Please note that this default setup uses HTTPS not SSH, and therefore you will
 
 * git init _(only use once to setup git repo)_
 * git add . **or** git add `file`
+* git status _(check the correct files have been added)_
 * git commit -m `"this is my messsage"`
-* git remote add origin `https://github.com/username/Hello-World.git`
+* git remote add origin `ssh://git@github.com/username/repo.git`
 * git push -u origin master
+* git remote -v _(test remote origin is correct)_
 
 ## REMOVE FILE FROM GIT ##
 * git rm --cached `file`
@@ -242,7 +244,7 @@ _Git does not care what your folder in which you store your git repo is called b
 
 1. First rename your existing folder to your new repo name
 2. Edit `.git/config` and change the name
-3. Update the remote origin (example uses SSH): `git remote set-url origin git@github.com:username/repo.git`
+3. Update the remote origin (example uses SSH): `git remote set-url origin ssh://git@github.com/username/repo.git`
 
 ## NOT HAVING TO ENTER USERNAME AND PASSWORD FOR GIT (BY USING SSH INSTEAD OF HTTPS) ##
 1. Generate a new SSH key: `ssh-keygen -t rsa -C "your_email@youremail.com"`
@@ -254,7 +256,7 @@ _Git does not care what your folder in which you store your git repo is called b
 
 		Hi _username_! You've successfully authenticated, but GitHub does not provide shell access.
 		
-7. Then `cd` back to your repo and update the remote origin to use SSH: `git remote set-url origin git@github.com:username/repo.git`
+7. Then `cd` back to your repo and update the remote origin to use SSH: `git remote set-url origin ssh://git@github.com/username/repo.git`
 8. Do a `commit` and `push` it to test if it works! 
 
 ## UPDATE HEROKU APP ##
