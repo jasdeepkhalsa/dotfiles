@@ -1,4 +1,8 @@
 # Commands #
+## INSTALL YEOMAN WITH WEBAPP GENERATOR ##
+* npm uninstall -g grunt && npm install -g yo grunt-cli bower
+* npm install -g generator-webapp && npm install -g generator-mocha
+
 ## CREATE AN ALIAS OF A COMMAND (LINUX) ##
 * alias `alias`='`command`'
 
