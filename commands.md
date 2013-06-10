@@ -6,12 +6,11 @@
 ## CREATE AN ALIAS OF A COMMAND (LINUX) ##
 * alias `alias`='`command`'
 
-## FIND OUT WHERE SH, BASH OR SVN IS LOCATED FOR SHELL SCRIPTS ##
-* which sh
-* which bash
-* which svn
+## FIND OUT WHERE AN APPLICATION IS LOCATED FOR SHELL SCRIPTS (Windows/Linux) ##
+* Linux: which bash
+* Windows: where svn
 
-_Outputs something like /bin/sh or /bin/bash to use with a shebang (#!) in a shell script e.g. "#!/bin/sh"_
+_Outputs something like /bin/bash to use with a shebang (#!) in a shell script e.g. "#!/bin/bash" or a Windows file path_
 
 ## RUN WEBCAM - LOAD VIDEO MODULE ##
 * `sudo modprobe uvcvideo`
