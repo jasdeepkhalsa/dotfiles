@@ -7,8 +7,8 @@
 * alias `alias`='`command`'
 
 ## FIND OUT WHERE AN APPLICATION IS LOCATED FOR SHELL SCRIPTS (Windows/Linux) ##
-* Linux: which bash
-* Windows: where svn
+* Linux: which `bash`
+* Windows: where `svn`
 
 _Outputs something like /bin/bash to use with a shebang (#!) in a shell script e.g. "#!/bin/bash" or a Windows file path_
 
