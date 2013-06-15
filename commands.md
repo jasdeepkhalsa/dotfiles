@@ -6,12 +6,11 @@
 ## CREATE AN ALIAS OF A COMMAND (LINUX) ##
 * alias `alias`='`command`'
 
-## FIND OUT WHERE SH, BASH OR SVN IS LOCATED FOR SHELL SCRIPTS ##
-* which sh
-* which bash
-* which svn
+## FIND OUT WHERE AN APPLICATION IS LOCATED FOR SHELL SCRIPTS (Windows/Linux) ##
+* Linux: which `bash`
+* Windows: where `svn`
 
-_Outputs something like /bin/sh or /bin/bash to use with a shebang (#!) in a shell script e.g. "#!/bin/sh"_
+_Outputs something like /bin/bash to use with a shebang (#!) in a shell script e.g. "#!/bin/bash" or a Windows file path_
 
 ## RUN WEBCAM - LOAD VIDEO MODULE ##
 * `sudo modprobe uvcvideo`
@@ -91,7 +90,8 @@ _Or alternatively for exporting local repos to a local folder use the "file://" 
 * svn export `file://$HOME/svn/project/` `$HOME/staging.website.co.uk/` --force
 
 ### FIND CHANGES TO A FILE BETWEEN PREVIOUS AND CURRENT REVISION ###
-* svn diff -r PREV:COMMITTED `file`
+* svn diff -r `PREV`:`COMMITTED` `file`
+* svn log -r `PREV`:`COMMITTED` -v
 
 ### CREATE SVN POST COMMIT HOOK FOR AUTOMATIC DEPLOYMENT TO STAGING/LIVE SERVER ###
 * In the `svn` root directory navigate to the `hooks` folder
