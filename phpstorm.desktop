@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_GB]=/home/jasdeep/phpstorm/bin/webide.png
+Name[en_GB]=PhpStorm
+Exec=/home/jasdeep/phpstorm/bin/phpstorm.sh %f
+Name=PhpStorm
+Icon=/home/jasdeep/phpstorm/bin/webide.png
+Categories=Motif;Utility;TextTools;
