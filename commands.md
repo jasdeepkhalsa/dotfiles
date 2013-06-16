@@ -240,8 +240,11 @@ _(Please note that this default setup uses HTTPS not SSH, and therefore you will
 * git push -u origin master
 * git remote -v _(test remote origin is correct)_
 
-## REMOVE FILE FROM GIT ##
+## REMOVE FILE FROM GIT BUT KEEP LOCAL ##
 * git rm --cached `file`
+
+## REMOVE FOLDER FROM GIT BUT KEEP LOCAL ##
+* git rm -r --cached `node_modules`
 
 ## CHANGE GIT REPO NAME & URL ##
 _Git does not care what your folder in which you store your git repo is called but to change the repo's name, if you delete your old repo on GitHub then you can do the following_
