@@ -1,4 +1,7 @@
 # Commands #
+## CREATE A SYMLINK ##
+* ln -s `destination` `linkname`
+
 ## VI OR VIM FOR BEGINNERS ##
 
 _The two basic modes of vi or vim are to edit a document in INSERT mode or enter commands in COMMAND mode_
