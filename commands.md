@@ -1,4 +1,27 @@
 # Commands #
+## VI OR VIM FOR BEGINNERS ##
+
+_The two basic modes of vi or vim are to edit a document in INSERT mode or enter commands in COMMAND mode_
+
+_Use arrow keys to navigate the document in COMMAND mode_
+
+Editing or Entering Commands
+* i - Enter insert/edit mode
+* ESC - Enter command mode
+
+Commands:
+* :q - Quit
+* :w - Save/Write
+* :wq - Save/Write and Quit
+* :q! - Don’t save and Quit
+* :`line number` - Go to line
+* dd - Delete line
+* p - Paste line
+* u - Undo last edit
+* w - Skip word
+* /`keyword` - Search keyword
+* :syntax on - Syntax highlighting on (or permanently you can do `vi ~/.vimrc` and add the line `syntax on`, then save the file)
+
 ## INSTALL YEOMAN WITH WEBAPP GENERATOR ##
 * npm uninstall -g grunt && npm install -g yo grunt-cli bower
 * npm install -g generator-webapp && npm install -g generator-mocha
