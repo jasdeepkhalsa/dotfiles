@@ -358,7 +358,17 @@ _Where "iwl3945" is the wireless driver, found with sudo lshw -C network_
 * tail -f  /var/log/apache2/access.log
 
 ## SSH SECURE SHELL ##
+* ssh `username`@`hostname`
 * ssh -l `username` `hostname`
+
+_You will be prompted for the password_
+
+## SSH PASSWORD-LESS LOGIN ##
+_From your local Linux PC run the following in Shell/Bash_
+
+* ssh-copy-id -i ~/.ssh/id_rsa.pub `username`@`hostname`
+
+_You will be prompted for the password_
 
 ## LIST PROCESSES ##
 * ps -e
