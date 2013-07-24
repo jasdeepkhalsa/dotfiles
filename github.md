@@ -72,7 +72,7 @@ Commit the changes:
 		$ git push origin master
 
 ## 3. Wait 5-10 minutes ##
-Wait 5 to 10 minutes for the changes to appear in your page at http://`username`.github.io/`repository`/.
+Wait 5 to 10 minutes for the changes to appear in your page at http://`{username}`.github.io/`{repository}`/.
 
 After re-basing, GitHub may still claim that the two branches master and gh-pages are out of sync.
 
