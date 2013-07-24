@@ -57,7 +57,7 @@ Return to the master branch (to make sure future commits are done on the right b
 		$ git checkout master
 		
 ### gh-pages is more up-to-date than master ###
-_Do this when GitHub says something like gh-pages is "1 commit ahead and 0 commits behind master"__
+_Do this when GitHub says something like gh-pages is "1 commit ahead and 0 commits behind master"_
 
 Go to the master branch:
 
