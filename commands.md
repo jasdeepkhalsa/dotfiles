@@ -26,11 +26,11 @@ Commands:
 * :syntax on - Syntax highlighting on
 * For permanent syntax highlighting and changing tabs into 4 spaces, change your `~/.vimrc` to:
 
-	syntax on
-	set smartindent
-	set tabstop=4
-	set shiftwidth=4
-	set expandtab
+		syntax on
+		set smartindent
+		set tabstop=4
+		set shiftwidth=4
+		set expandtab
 
 ## INSTALL YEOMAN WITH WEBAPP GENERATOR ##
 * npm uninstall -g grunt && npm install -g yo grunt-cli bower
