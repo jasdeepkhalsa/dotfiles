@@ -23,7 +23,14 @@ Commands:
 * u - Undo last edit
 * w - Skip word
 * /`keyword` - Search keyword
-* :syntax on - Syntax highlighting on (or permanently you can do `vi ~/.vimrc` and add the line `syntax on`, then save the file)
+* :syntax on - Syntax highlighting on
+* For permanent syntax highlighting and changing tabs into 4 spaces, change your `~/.vimrc` to:
+
+	syntax on
+	set smartindent
+	set tabstop=4
+	set shiftwidth=4
+	set expandtab
 
 ## INSTALL YEOMAN WITH WEBAPP GENERATOR ##
 * npm uninstall -g grunt && npm install -g yo grunt-cli bower
@@ -234,9 +241,10 @@ _Make sure you know what the line ending is either \n for UNIX or \r\n for Windo
 4. Run command `.\ all.sql` **or** `source all.sql`
 5. CSV is now in the MySQL table!
 
-## GREP FOR FINDING INFO ##
+## GREP FOR FINDING INFO OR FIND & REPLACE ##
 * grep --before-context=3 --after-context=3 -i `search text` *
 * grep -l -i `search text` *
+* grep -rl '`old text`' `directory` | xargs sed -i 's/`old text`/`new text`/g'
 
 ## CONFIGURING A PACKAGE ##
 _First cd to the directory of the package_
