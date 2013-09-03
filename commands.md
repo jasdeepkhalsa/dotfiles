@@ -88,6 +88,9 @@ _Outputs something like /bin/bash to use with a shebang (#!) in a shell script e
 * tar xvf `something`.tar
 * tar xvfz `something`.tar.gz
 
+### LIST ARCHIVE FILES (TOP DIRECTORY ONLY) ###
+* tar -ztf `file.tar.gz` | egrep '^[^/]+/?$'
+
 ## USING SUBVERSION (SVN) ##
 _Please note: examples are just for http:// or https:// accessible repos_
 
@@ -124,6 +127,7 @@ _Or alternatively for exporting local repos to a local folder use the "file://" 
 
 ### FIND CHANGES TO A FILE BETWEEN PREVIOUS AND CURRENT REVISION ###
 * svn diff -r `PREV`:`COMMITTED` `file`
+* svn diff `COLOURED DIFF OF <FILE> USING VIM` | vim -R -
 * svn log -r `PREV`:`COMMITTED` -v
 
 ### CREATE SVN POST COMMIT HOOK FOR AUTOMATIC DEPLOYMENT TO STAGING/LIVE SERVER ###
