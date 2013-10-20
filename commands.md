@@ -228,6 +228,30 @@ _First login to the MySQL command-line_
 ## FIND AND REPLACE DATA IN MYSQL ##
 * update `table_name` set `field_name` = replace(`field_name`,'`string_to_find`','`string_to_replace`');
 
+## UPDATING VALUES OF ONE TABLE USING ANOTHER TABLE ##
+
+_Important: make sure that the temporary table has a foreign key (id) from the table you want to update, so that a relationship between the two tables can be created easily_
+
+You can use [`LOAD DATA INFILE`][1] to bulk load the 800,000 rows of data into a temporary table, then use multiple-table [`UPDATE`][2] syntax to join your existing table to the temporary table and update the quantity values.
+
+For example:
+
+    CREATE TEMPORARY TABLE your_temp_table LIKE your_table;
+    
+    LOAD DATA INFILE '/tmp/your_file.csv'
+    INTO TABLE your_temp_table
+    FIELDS TERMINATED BY ','
+    (id, product, sku, department, quantity); 
+    
+    UPDATE your_table
+    INNER JOIN your_temp_table on your_temp_table.id = your_table.id
+    SET your_table.quantity = your_temp_table.quantity;
+    
+    DROP TEMPORARY TABLE your_temp_table;
+
+  [1]: http://dev.mysql.com/doc/refman/5.5/en/load-data.html
+  [2]: http://dev.mysql.com/doc/refman/5.5/en/update.html
+
 ## IMPORT CSV INTO MYSQL ##
 _Note: First ensure the table and fields already exist in MySQL_
 
