@@ -393,6 +393,44 @@ _Where "iwl3945" is the wireless driver, found with sudo lshw -C network_
 * tail -f  /var/log/apache2/error.log
 * tail -f  /var/log/apache2/access.log
 
+## SETTING UP A LOCAL DEV ENVIRONMENT WITH VIRTUAL HOSTS ##
+* Create a new virtual host file in `/etc/apache2/sites-available/` e.g. `websitename.conf`, as follows:
+
+		NameVirtualHost *:80
+		<VirtualHost *:80>
+		    ServerAdmin webmaster@localhost
+		    ServerName websitename.dev
+		
+		    DocumentRoot /dir/to/website
+		    <Directory />
+		        Options FollowSymLinks
+		        AllowOverride All
+		    </Directory>
+		    <Directory /dir/to/website>
+		        Options Indexes FollowSymLinks MultiViews
+		        AllowOverride All
+		        Order allow,deny
+		        Allow from all
+		        Require all granted
+		    </Directory>
+		
+		    ErrorLog ${APACHE_LOG_DIR}/error.log
+		    CustomLog ${APACHE_LOG_DIR}/access.log combined
+		</VirtualHost>
+		
+* Now enable the site with `sudo a2ensite websitename`
+* Run `sudo service apache2 restart`
+* Add your new `websitename.dev` to `/etc/hosts` using your localhost ip address e.g. `127.0.0.1`, as follows:
+
+		127.0.0.1   websitename.dev www.websitename.dev
+
+* Now try loading `websitename.dev/` in your browser to see if it works, if not, try the following:
+	* `ping websitename.dev/` should bring back your localhost ip address `127.0.0.1`. If not, check your hosts file again
+	* Delete your browser cache
+	* Try loading the website in a different browser
+	* Try reloading apache again
+
+
 ## SSH SECURE SHELL ##
 * ssh `username`@`hostname`
 * ssh -l `username` `hostname`
