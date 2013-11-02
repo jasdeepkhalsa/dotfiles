@@ -487,7 +487,7 @@ _Press Control + D to complete_
 * avgvvctl
 
 ## LOCAL TO REMOTE SYNC ##
-* rsync --progress --ignore-times --delete -rvz `/localdir/files/` `username`@`mydomain.com`:`/remotedir/files/`
+* rsync -arvz --checksum --delete --progress --stats `/localdir/files/` `username`@`mydomain.com`:`/remotedir/files/`
 
 ## REMOTE TO LOCAL SYNC ##
-* rsync --progress --ignore-times --delete -rvz `username`@`mydomain.com`:`/remotedir/files/` `/localdir/files/`
+* rsync -arvz --checksum --delete --progress --stats `username`@`mydomain.com`:`/remotedir/files/` `/localdir/files/`
