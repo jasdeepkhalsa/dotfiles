@@ -326,7 +326,22 @@ _Git does not care what your folder in which you store your git repo is called b
 		Hi _username_! You've successfully authenticated, but GitHub does not provide shell access.
 		
 7. Then `cd` back to your repo and update the remote origin to use SSH: `git remote set-url origin ssh://git@github.com/username/repo.git`
-8. Do a `commit` and `push` it to test if it works! 
+8. Do a `commit` and `push` it to test if it works!
+
+## KEEP YOUR LOCAL GIT REPOS UP-TO-DATE WITH AN AUTOMATIC GIT PULL CRONJOB ##
+_This file should be added to /etc/cron.hourly/. Git repos, as denoted by the FILES variable, should all be available under the same folder inside subfolders._
+
+		#!/bin/bash
+		FILES=/dir/to/repos/*
+		for f in $FILES
+		do
+		    if [ -d $f ] && [ -d $f/.git ]
+		        then
+		            echo "Processing Git repository, $f"
+		            cd $f
+		            git --git-dir="$f/.git" pull -q
+		    fi;
+		done
 
 ## UPDATE HEROKU APP ##
 _First commit files to git and then..._
