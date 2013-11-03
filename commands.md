@@ -415,6 +415,7 @@ _Where "iwl3945" is the wireless driver, found with sudo lshw -C network_
 		<VirtualHost *:80>
 		    ServerAdmin webmaster@localhost
 		    ServerName websitename.dev
+		    ServerAlias www.websitename.dev
 		
 		    DocumentRoot /dir/to/website
 		    <Directory />
