@@ -14,8 +14,9 @@ For customizing the Terminal in Ubuntu I use [bash-it](https://github.com/revans
 ### Contents ###
 * `commands.md` - lists my most commonly used Ubuntu/Windows commands. Trust me this list of commands is AWESOME! Check it out right away!
 * `.bashrc` - `bash-it` gives a default `.bash_profile` file but this is actually named `.bashrc` in Ubuntu
+* `custom.aliases.bash` - my quick aliases put under `~/,bash_it/custom/` 
 * `solarized.theme.bash` - my work-in-progress shell theme based off the default theme `bobby`. Create a new folder `solarized` under `~/.bash_it/themes/` and add this file to it.
-* `solarized-github.css` - code highlighting for GitHub using [Stylish](http://userstyles.org/stylish/). Install Stylish, create a new theme, paste in this css and add `github.com` as the domain. Bingo!
+* `github.md` - a quick guide explaining advanced git branch usage 
 * `mimeapps.list` - tells Ubuntu which applications to associate with which file types. In this case I've associated .php, .css, .js, .txt to `Geany`. Add under `~/.local/share/applications/` making sure to backup your existing `mimeapps.list` file
 
 ### Contact ###

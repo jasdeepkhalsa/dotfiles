@@ -1,23 +1,27 @@
 
 [Default Applications]
-text/html=google-chrome.desktop;
-x-scheme-handler/http=google-chrome.desktop;
-x-scheme-handler/https=google-chrome.desktop;
-x-scheme-handler/about=google-chrome.desktop;
-x-scheme-handler/unknown=google-chrome.desktop;
-x-scheme-handler/webcal=google-chrome.desktop;
-x-scheme-handler/mailto=google-chrome.desktop;
-application/x-php=phpstorm.desktop;
-application/x-genesis-rom=phpstorm.desktop;
-text/plain=phpstorm.desktop;
-application/javascript=phpstorm.desktop;
-text/css=phpstorm.desktop;
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/webcal=google-chrome.desktop
+x-scheme-handler/mailto=google-chrome.desktop
+application/x-php=geany.desktop;
+application/x-genesis-rom=geany.desktop;
+text/plain=geany.desktop;
+application/javascript=geany.desktop;
+text/css=geany.desktop;
 
 [Added Associations]
-application/x-shellscript=gedit.desktop;
-application/x-genesis-rom=phpstorm.desktop;geany.desktop;
-text/plain=phpstorm.desktop;
-application/x-php=phpstorm.desktop;geany.desktop;
+application/x-shellscript=geany.desktop;
+application/x-genesis-rom=geany.desktop;
+text/plain=geany.desktop;
+application/x-php=geany.desktop;
 application/x-sharedlib=geany.desktop;
-application/x-python-bytecode=phpstorm.desktop;geany.desktop;
-text/x-python=phpstorm.desktop;geany.desktop;
+application/x-python-bytecode=geany.desktop;
+text/x-python=geany.desktop;
+image/jpeg=inkscape.desktop;
+text/css=geany.desktop;
+text/html=google-chrome.desktop;
+image/vnd.adobe.photoshop=inkscape.desktop;

@@ -4,7 +4,7 @@
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 # Add rvm gems and nginx to the path
-#export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
+export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
 
 # Path to the bash it configuration
 export BASH_IT=$HOME/.bash_it
@@ -17,8 +17,8 @@ export BASH_IT_THEME='solarized'
 export GIT_HOSTING='git@git.domain.com'
 
 # Set my editor and git editor
-export EDITOR="~/Titanium_Studio/TitaniumStudio -w"
-export GIT_EDITOR='~/Titanium_Studio/TitaniumStudio -w'
+export EDITOR="/usr/bin/mate -w"
+export GIT_EDITOR='/usr/bin/mate -w'
 
 # Set the path nginx
 export NGINX_PATH='/opt/nginx'
@@ -41,3 +41,5 @@ export TODO="t"
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
