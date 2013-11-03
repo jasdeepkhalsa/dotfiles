@@ -5,7 +5,7 @@ The main OS I work with is Ubuntu and ∴ the majority of the commands are Linux
 
 My main editor is `vim` due to it being FREE, and being available inside the `shell` on the client and server alike - with awesome syntax highlighting. I have written a basic guide to vim in `commands.md` - check it out!
 
-(In the past I have tried various editors and IDEs, including Sublime Text and PHPStorm/WebStorm by JetBrains but they have been either too expensive, too complex or too bulky for my needs)
+(In the past I have tried various editors and IDEs, including Titanium, Sublime Text and PHPStorm/WebStorm by JetBrains but they have been either too expensive, too complex or too bulky for my needs)
 
 My secondary editor (for editing text and shell files) is [Geany](http://www.geany.org/).
 
