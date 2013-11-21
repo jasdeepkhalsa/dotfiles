@@ -81,6 +81,7 @@ _Outputs something like /bin/bash to use with a shebang (#!) in a shell script e
 ### ZIP/TAR ###
 * zip `output`.zip `input.txt`
 * tar czf `output`.tar.gz `input.txt`
+* env GZIP=-9 tar cvzf `output`.tar.gz `/path/to/directory`
 
 ### UNZIP/UNRAR/UNTAR ###
 * unzip `file`.zip
