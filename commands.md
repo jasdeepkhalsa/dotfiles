@@ -271,9 +271,11 @@ _Make sure you know what the line ending is either \n for UNIX or \r\n for Windo
 5. CSV is now in the MySQL table!
 
 ## GREP FOR FINDING INFO OR FIND & REPLACE ##
-* grep --before-context=3 --after-context=3 -i `search text` *
-* grep -l -i `search text` *
-* grep -rl '`old text`' `directory` | xargs sed -i 's/`old text`/`new text`/g'
+* grep --before-context=3 --after-context=3 -i `search text` * (non-recursive)
+* grep --before-context=3 --after-context=3 -i -r `search text` ./* (recursive)
+* grep -l -i `search text` * (non-recursive)
+* grep -l -i -r `search text` ./* (recursive)
+* grep -rl '`old text`' `directory` | xargs sed -i 's/`old text`/`new text`/g' (recursive find & replace)
 
 ## CONFIGURING A PACKAGE ##
 _First cd to the directory of the package_
