@@ -131,6 +131,15 @@ _Or alternatively for exporting local repos to a local folder use the "file://" 
 * svn diff `COLOURED DIFF OF <FILE> USING VIM` | vim -R -
 * svn log -r `PREV`:`COMMITTED` -v
 
+### CREATE A NEW SVN REPO AND COPY AN EXISTING SVN REPO TO IT ###
+* svnadmin dump `svn/dev` > `full.dump`
+* svnadmin load --force-uuid `svn/dev2` < `full.dump`
+* svnadmin setuuid `svn/dev2` `[UUID - use svn info to find out the UUID]`
+* svn switch --relocate `http://svn.oldlink.co.uk/dev` `http://svn.newlink.co.uk/dev`
+* grep --before-context=3 --after-context=3 -r --exclude=`*{svn,entries,svn-base,tmp,save,all-wcprops,xml}` `"old string"` *
+* grep -rl --exclude=`*{svn,entries,svn-base,tmp,save,all-wcprops,xml}` `"old string"` * | xargs sed -i 's/`old string`/`new string`/g'
+* update `table` set `field` = replace(`field`,'`old string`','`new string`');
+
 ### CREATE SVN POST COMMIT HOOK FOR AUTOMATIC DEPLOYMENT TO STAGING/LIVE SERVER ###
 * In the `svn` root directory navigate to the `hooks` folder
 * Find the file `post-commit.tmpl` and edit it by adding some shell commands! For example:
