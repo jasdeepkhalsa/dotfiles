@@ -458,6 +458,14 @@ _Where "iwl3945" is the wireless driver, found with sudo lshw -C network_
 	* Try loading the website in a different browser
 	* Try reloading apache again
 
+## 301 REDIRECTING AN OLD WEBSITE TO A NEW WEBSITE WITH A .HTACCESS FILE ##
+
+		Options +FollowSymlinks
+		RewriteEngine On
+		RewriteCond %{HTTP_HOST} ^oldsite.co.uk [NC]
+		RewriteRule ^(.*)$ http://newsite.co.uk/$1 [L,R=301]
+		RewriteCond %{HTTP_HOST} ^www.oldsite.co.uk [NC]
+		RewriteRule ^(.*)$ http://newsite.co.uk/$1 [L,R=301]
 
 ## SSH SECURE SHELL ##
 * ssh `username`@`hostname`
