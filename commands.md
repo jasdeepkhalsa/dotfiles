@@ -483,6 +483,10 @@ _You will be prompted for the password_
 ## LIST PROCESSES ##
 * ps -e
 
+## FIND WHAT INITIATED A PROCESS ##
+* ps ax -o pid,cmd | grep `node`
+* readlink -f /proc/`pid`/exe
+
 ## KILL A PROCESS ##
 * killall -9 `appname/process name`
 
