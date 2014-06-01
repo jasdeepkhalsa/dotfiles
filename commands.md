@@ -45,6 +45,14 @@ Commands:
 
 _Outputs something like /bin/bash to use with a shebang (#!) in a shell script e.g. "#!/bin/bash" or a Windows file path_
 
+## AFTER CREATING A SHELL SCRIPT TEST TO SEE IF IT WILL RUN ##
+
+This is generally for shell scripts placed in e.g. `/etc/cron.hourly/` or `/etc/cron.weekly/`
+
+* run-parts --test `/etc/cron.hourly/`
+
+Please note: scripts placed in these cron directories sometimes need their extensions removed e.g. test.sh should be test, and should be executable with the command: `sudo chmod +x test`
+
 ## RUN WEBCAM - LOAD VIDEO MODULE ##
 * `sudo modprobe uvcvideo`
 
