@@ -309,6 +309,25 @@ _First cd to the directory of the package_
 * npm ls
 * npm shrinkwrap
 
+## BASIC NPM COMMANDS
+* npm config set init.author.name "`Your Name`"
+* npm config set init.author.email "jasdeep@simplyspiritdesign.com"
+* npm dedupe
+* npm version
+* npm search `search terms`
+* npm adduser `your-username` # For publishing
+
+## NODE.JS FRAMEWORKS
+* npm install hapi -g
+* npm install restify
+* npm install express
+
+## ADDING TESTING TO A NODE.JS APP
+* npm install mocha --save-dev
+* npm install chai --save-dev
+* npm install sinon --save-dev
+* npm install hippie --save-dev
+
 ## GIT REPOSITORY UPDATE & SUBMIT ##
 _First cd to the directory of the package_
 
