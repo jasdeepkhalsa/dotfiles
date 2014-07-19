@@ -32,6 +32,11 @@ Commands:
 		set shiftwidth=4
 		set expandtab
 
+## INSTALL FRONT-END COMPONENTS WITH BOWER
+* npm install -g bower
+* bower install `jquery#1.x`
+* bower install `https://github.com/douglascrockford/JSON-js/blob/master/json2.js`
+
 ## INSTALL YEOMAN WITH WEBAPP GENERATOR ##
 * npm uninstall -g grunt && npm install -g yo grunt-cli bower
 * npm install -g generator-webapp && npm install -g generator-mocha
