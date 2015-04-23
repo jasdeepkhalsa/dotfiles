@@ -245,8 +245,8 @@ _First login to the MySQL command-line_
 * mysql> GRANT ALL PRIVILEGES ON `database`.* TO '`username`'@'%' WITH GRANT OPTION;
 
 ## COMBINE MULTIPLE CSVs INTO ONE FILE `Windows/DOS` ##
-* cd `dir`
-* copy \*.csv `all`.csv
+* Windows: copy \*.csv `all`.csv
+* Linux: awk 'FNR > 1' *.csv > all.csv (this will also chop the first/header line of the CSV file off each file)
 
 ## FIND AND REPLACE DATA IN MYSQL ##
 * update `table_name` set `field_name` = replace(`field_name`,'`string_to_find`','`string_to_replace`');
