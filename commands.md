@@ -1,4 +1,9 @@
 # Commands #
+## Make a JPEG Baseline to JPEG Progressive (or vise versa)
+* To check if an image is progressive or baseline: `identify -verbose image.jpg | grep Interlace` (If you get back `Interlace: JPEG` then it’s progressive. It you get back `Interlace: None` then it’s a baseline i.e. non-progressive JPEG)
+* To convert a progressive JPEG image to baseline JPEG: `jpegtran image_progressive.jpg > image_baseline.jpg`
+* To convert a baseline JPEG image to progressive JPEG: `jpegtran -progressive image_baseline.jpg > image_progressive.jpg`
+
 ## CREATE A SYMLINK ##
 * ln -s `destination` `linkname`
 
