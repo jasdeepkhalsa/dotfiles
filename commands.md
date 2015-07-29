@@ -1,4 +1,23 @@
 # Commands #
+
+## Git Tags
+
+### Listing tags
+
+    git tag
+
+### Adding tags
+
+1. Add your git tag to a repo with `git tag -a v1.0`
+2. Push your tag with `git push origin v1.0`
+
+### Deleting tags
+
+If you need to delete a tag after it's been pushed for any reason you can do that with:
+
+1. `git tag -d v1.0`
+2. `git push origin :refs/tags/v1.0`
+
 ## Make a JPEG Baseline to JPEG Progressive (or vise versa)
 * To check if an image is progressive or baseline: `identify -verbose image.jpg | grep Interlace` (If you get back `Interlace: JPEG` then it’s progressive. It you get back `Interlace: None` then it’s a baseline i.e. non-progressive JPEG)
 * To convert a progressive JPEG image to baseline JPEG: `jpegtran image_progressive.jpg > image_baseline.jpg`
