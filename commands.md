@@ -326,6 +326,7 @@ _Make sure you know what the line ending is either \n for UNIX or \r\n for Windo
 ## FIND FOR FINDING FILES
 * find `.` \( -iname "`*.jpg`" -or -iname "`*.png`" \) -printf "%s %p\n" | sort -n (files ordered by size ascending)
 * find `.` \( -iname "`*.jpg`" -or -iname "`*.png`" \) | wc -l (file count)
+* find `.` \( -iname "`*.jpg`" -or -iname "`*.png`" \) -printf "%s\n" | awk '{s+=$1} END {print s}' (total size of files)
 
 ## CONFIGURING A PACKAGE ##
 _First cd to the directory of the package_
