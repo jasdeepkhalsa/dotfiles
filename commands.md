@@ -323,6 +323,10 @@ _Make sure you know what the line ending is either \n for UNIX or \r\n for Windo
 * grep -l -i -r `search text` ./* (recursive)
 * grep -rl '`old text`' `directory` | xargs sed -i 's/`old text`/`new text`/g' (recursive find & replace)
 
+## FIND FOR FINDING FILES
+* find `.` \( -iname "`*.jpg`" -or -iname "`*.png`" \) -printf "%s %p\n" | sort -n (files ordered by size ascending)
+* find `.` \( -iname "`*.jpg`" -or -iname "`*.png`" \) | wc -l (file count)
+
 ## CONFIGURING A PACKAGE ##
 _First cd to the directory of the package_
 
