@@ -301,9 +301,15 @@ For example:
 
 ## IMPORT CSV INTO MYSQL ##
 _Note: First ensure the table and fields already exist in MySQL_
-
 _Make sure you know what the line ending is either \n for UNIX or \r\n for Windows_
+_Tab separated character is \t_
 
+### METHOD 1
+mysqlimport --debug --ignore-lines=1 --fields-terminated-by='`\t`' --local -u root -p `database` `table`.csv
+
+_The file should be named the same as the table_
+
+### METHOD 2 (Does not work on newer version of MySQL)
 1. cd to `dir` of the `all`.csv file
 2. Add the following into `all.sql` file:
 	
@@ -315,6 +321,9 @@ _Make sure you know what the line ending is either \n for UNIX or \r\n for Windo
 3. Load MySQL Shell and run command: use `database`; _(Don't forget the trailing semi-colon ;)_
 4. Run command `.\ all.sql` **or** `source all.sql`
 5. CSV is now in the MySQL table!
+
+## CASE SENSITIVE RETRIEVAL OF ENTIRES IN SQL (USED FOR THE SIKHER DICTIONARY)
+	SELECT * FROM `table` WHERE BINARY `field` in ('word1','word2','word3')
 
 ## GREP FOR FINDING INFO OR FIND & REPLACE ##
 * grep --before-context=3 --after-context=3 -i `search text` * (non-recursive)
