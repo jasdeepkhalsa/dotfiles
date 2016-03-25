@@ -1,5 +1,23 @@
 # Commands #
 
+## Resize Images in Batch / Bulk Resize
+
+_From: http://askubuntu.com/questions/1164/how-to-easily-resize-images_
+
+	sudo apt-get install imagemagick
+
+The command `mogrify` overwrites the original files with the resized images:
+
+	mogrify -resize 50% *png      # keep image aspect ratio
+	mogrify -resize 320x240 *png  # keep image aspect ratio
+	mogrify -resize 320x240! *png # don't keep image aspect ratio
+	mogrify -resize x240 *png     # don't keep image aspect ratio
+	mogrify -resize 320x *png     # don't keep image aspect ratio
+
+To not overwrite the image you can use `convert` instead:
+
+	convert  -resize 50% source.png dest.jpg
+
 ## Git Tags
 
 ### Listing tags
