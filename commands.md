@@ -1,5 +1,9 @@
 # Commands #
 
+## Make a Website Available Offline with wget
+
+	wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://example.com
+
 ## Resize Images in Batch / Bulk Resize
 
 _From: http://askubuntu.com/questions/1164/how-to-easily-resize-images_
