@@ -1,4 +1,4 @@
-## Jasdeep Khalsa's dotfiles ##
+## Jasdeep's dotfiles ##
 A list of my most commonly used Ubuntu/Windows commands and files.
 
 The main OS I work with is Ubuntu and ∴ the majority of the commands are Linux/Debian specific.
@@ -21,4 +21,3 @@ For customizing the Terminal in Ubuntu I use [bash-it](https://github.com/revans
 
 ### Contact ###
 * Email: jasdeep {at} simplyspiritdesign {dot} com
-* Twitter: [@JasdeepKhalsa1](http://twitter.com/@JasdeepKhalsa1)
