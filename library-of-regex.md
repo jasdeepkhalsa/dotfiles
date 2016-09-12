@@ -11,4 +11,4 @@ Cheatsheet:
 * `\s` - Find one space charatcer
 * `(\r\n?|\n)` - Find a line ending character
 * `.+` - Find any character with at least one occurence
-* `(.?|.+)` - Find any character with zero or one occurences OR any character with at least one occurence. This could possibly be merged into just one `.?` character, but this has yet to be tested.
+* `(.?|.+)` - Find any character with zero or one occurences OR any character with at least one occurence. This could possibly be merged into just one `.*` character, but this has yet to be tested.
