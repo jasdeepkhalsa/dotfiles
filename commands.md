@@ -1,5 +1,9 @@
 # Commands #
 
+## Convert Images into PDF
+
+	convert image1.jpeg image2.jpeg image3.jpeg outputFileName.pdf
+
 ## Make a Website Available Offline with wget
 
 	wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://example.com
