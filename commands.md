@@ -8,6 +8,12 @@
 
 	wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://example.com
 
+### For downloading an archive.org Wayback Machine snapshot/archive (https://web.archive.org/web/)
+
+	wget --mirror --convert-links --adjust-extension --page-requisites --no-parent --execute robots=off --domains=staticweb.archive.org,web.archive.org https://web.archive.org/web/{timestamp}/{url}
+	
+_Please note: If you're after downloading all the files on the page, rather than just the page, you should add in the timestamp of the page which shows up when you hover over a file, instead of the timestamp which shows in the URL address bar for the page - as they tend to be different_
+
 ## Resize Images in Batch / Bulk Resize
 
 _From: http://askubuntu.com/questions/1164/how-to-easily-resize-images_
