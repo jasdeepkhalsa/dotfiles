@@ -1,5 +1,72 @@
 # Commands #
 
+## Setting up LAMP Stack (Apache 2, MySQL, PHP 7.0, PhpMyAdmin) on Ubuntu 17.04 (Zesty Zapus)
+
+_Please install in the following order_
+
+### Apache 2
+* Installing: `sudo apt-get install apache2`
+* Using:
+	* Start: `sudo systemctl start apache2`
+	* Stop: `sudo systemctl stop apache2`
+	* Restart: `sudo systemctl restart apache2`
+
+### MySQL 5.7.x
+
+* Installing: `sudo apt-get install mysql-server mysql-client`
+* Using:
+	* Without password (left blank during installation): `sudo mysql -u root`
+	* With password: `sudo mysql -u root -p`
+* Uninstalling: `sudo apt-get purge mysql* && sudo apt-get autoremove && sudo apt-get autoclean`
+
+#### Preparation for PhpMyAdmin
+
+_Note: MySQL 5.7 changed the secure model: now MySQL root login requires a sudo (while the password still can be blank). This means web-based tools like phpMyAdmin will be **not** able to use `root` as user. Therefore, the simplest (and safest) solution will be create a new user and grant required privileges._
+
+* Connect to MySQL:
+	* Without password (left blank during installation): `sudo mysql -u root`
+	* With password: `sudo mysql -u root -p`
+* Create a user for phpMyAdmin (replace `user` & `pass`):
+
+		CREATE USER 'user'@'localhost' IDENTIFIED BY 'pass';
+		GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION;
+		FLUSH PRIVILEGES;
+
+* Exit MySQL:
+
+
+	exit;
+
+### PHP 7.x
+	sudo apt-get install php7.0-mysql php7.0-curl php7.0-json php7.0-cgi php7.0 libapache2-mod-php7.0 php7.0-xml php7.0-mbstring
+
+### PhpMyAdmin
+
+* Installing: `sudo apt-get install phpmyadmin`
+* After installing:
+	* To the end of `/etc/apache2/apache2.conf` add the line:
+
+	```bash
+	# phpMyAdmin
+	Include /etc/phpmyadmin/apache.conf
+	```
+
+	* Restart apache with `sudo systemctl restart apache2`
+
+## Optional Installations of PHPBrew and Node Version Manager (nvm) on Ubuntu 17.04 (Zesty Zapus)
+
+_Note: PHPBrew requires the installation of PHP, as above_
+
+### PHPBrew
+
+* Installing: https://github.com/phpbrew/phpbrew
+* After installing: `phpbrew init`
+
+### Node Version Manager (nvm)
+
+* Installing: https://github.com/creationix/nvm
+* After installing: `nvm install --lts`
+
 ## Convert Images into PDF
 
 	convert image1.jpeg image2.jpeg image3.jpeg outputFileName.pdf
@@ -11,7 +78,7 @@
 ### For downloading an archive.org Wayback Machine snapshot/archive (https://web.archive.org/web/)
 
 	wget --mirror --convert-links --adjust-extension --page-requisites --no-parent --execute robots=off --domains=staticweb.archive.org,web.archive.org https://web.archive.org/web/{timestamp}/{url}
-	
+
 _Please note: If you're after downloading all the files on the page, rather than just the page, you should add in the timestamp of the page which shows up when you hover over a file, instead of the timestamp which shows in the URL address bar for the page - as they tend to be different_
 
 ## Resize Images in Batch / Bulk Resize
@@ -214,16 +281,16 @@ _Or alternatively for exporting local repos to a local folder use the "file://" 
 * Find the file `post-commit.tmpl` and edit it by adding some shell commands! For example:
 
         #!/bin/sh
-    
+
         REPOS="$1"
         REV="$2"
-    
+
         svn export $REPOS /home/user/public --force
-    
+
 * You will want to save the file as `post-commit` and ensure its permissions are 755 with:
 
     	chmod 755 post-commit
-    
+
 * You will also want to ensure that the file's owner is your username and not someone else's!
 
 * If this does not work check to make sure the $REPOS path is correct or use a hard coded path with the `file://` protocol if you only have one repo e.g. `file://$HOME/svn/project/`
@@ -316,16 +383,16 @@ You can use [`LOAD DATA INFILE`][1] to bulk load the 800,000 rows of data into a
 For example:
 
     CREATE TEMPORARY TABLE your_temp_table LIKE your_table;
-    
+
     LOAD DATA INFILE '/tmp/your_file.csv'
     INTO TABLE your_temp_table
     FIELDS TERMINATED BY ','
-    (id, product, sku, department, quantity); 
-    
+    (id, product, sku, department, quantity);
+
     UPDATE your_table
     INNER JOIN your_temp_table on your_temp_table.id = your_table.id
     SET your_table.quantity = your_temp_table.quantity;
-    
+
     DROP TEMPORARY TABLE your_temp_table;
 
   [1]: http://dev.mysql.com/doc/refman/5.5/en/load-data.html
@@ -344,7 +411,7 @@ _The file should be named the same as the table_
 ### METHOD 2 (Does not work on newer version of MySQL)
 1. cd to `dir` of the `all`.csv file
 2. Add the following into `all.sql` file:
-	
+
 		load data local infile 'all.csv' into table tblTable fields terminated by ','
 		enclosed by '"'
 		lines terminated by '\r\n'
@@ -438,7 +505,7 @@ _Git does not care what your folder in which you store your git repo is called b
 6. Now in Terminal/Shell type the following `ssh -T git@github.com`, click yes to any warning and it should say:
 
 		Hi _username_! You've successfully authenticated, but GitHub does not provide shell access.
-		
+
 7. Then `cd` back to your repo and update the remote origin to use SSH: `git remote set-url origin ssh://git@github.com/username/repo.git`
 8. Do a `commit` and `push` it to test if it works!
 
@@ -507,7 +574,7 @@ _Where "iwl3945" is the wireless driver, found with sudo lshw -C network_
 1. gksudo geany /etc/modprobe.d/iwl3945.conf **or** gksudo geany /etc/modprobe.d/iwl3945-disable11n.conf
 2. options iwl3945 disable_hw_scan=0 **or** options iwl3945 11n_disable=1
 
-## APACHE/MYSQL START, STOP, RESTART ##
+## APACHE/MYSQL START, STOP, RESTART (Ubuntu 14.04.5 LTS - Trusty Tahr) ##
 * sudo a2dissite `default` && sudo a2ensite `mysite`
 * sudo service apache2 start
 * sudo service apache2 stop
@@ -530,7 +597,7 @@ _Where "iwl3945" is the wireless driver, found with sudo lshw -C network_
 		    ServerAdmin webmaster@localhost
 		    ServerName websitename.dev
 		    ServerAlias www.websitename.dev
-		
+
 		    DocumentRoot /dir/to/website
 		    <Directory />
 		        Options FollowSymLinks
@@ -543,11 +610,11 @@ _Where "iwl3945" is the wireless driver, found with sudo lshw -C network_
 		        Allow from all
 		        Require all granted
 		    </Directory>
-		
+
 		    ErrorLog ${APACHE_LOG_DIR}/error.log
 		    CustomLog ${APACHE_LOG_DIR}/access.log combined
 		</VirtualHost>
-		
+
 * Now enable the site with `sudo a2ensite websitename`
 * Run `sudo service apache2 restart`
 * Add your new `websitename.dev` to `/etc/hosts` using your localhost ip address e.g. `127.0.0.1`, as follows:
