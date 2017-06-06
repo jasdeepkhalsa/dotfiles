@@ -34,8 +34,7 @@ _Note: MySQL 5.7 changed the secure model: now MySQL root login requires a sudo 
 
 * Exit MySQL:
 
-
-	exit;
+		exit;
 
 ### PHP 7.x
 	sudo apt-get install php7.0-mysql php7.0-curl php7.0-json php7.0-cgi php7.0 libapache2-mod-php7.0 php7.0-xml php7.0-mbstring
