@@ -1,0 +1,13 @@
+[user]
+        name = J@sdeep
+        email = noreply@github.com
+[alias]
+        co = checkout
+        this = symbolic-ref --short HEAD
+        br = branch
+        del = branch -D
+        new = checkout -b
+        m = checkout master
+        split = reset HEAD~
+        rb = rebase -i
+        rbm = pull --rebase origin master
