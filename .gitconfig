@@ -1,6 +1,6 @@
 [user]
         name = J@sdeep
-        email = noreply@github.com
+        email = jhbsk@users.noreply.github.com
 [alias]
         co = checkout
         this = symbolic-ref --short HEAD
