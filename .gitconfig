@@ -11,3 +11,4 @@
         split = reset HEAD~
         rb = rebase -i
         rbm = pull --rebase origin master
+        ls = diff --name-only
