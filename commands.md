@@ -224,6 +224,17 @@ Please note: scripts placed in these cron directories sometimes need their exten
 * tar xvf `something`.tar
 * tar xvfz `something`.tar.gz
 
+### COMPRESS PDF ON MAX/LINUX ###
+_Ghostscript or `gs` must be installed for use. Always check the output file size is smaller than the input file, as this is not always the case_
+
+* gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-"screen"} -dCompatibilityLevel=1.4 -sOutputFile=`output.pdf` `input.pdf`
+
+/screen - low-resolution output
+/ebook - medium-resolution output
+/printer - print output
+/prepress - pre-press
+/default - output useful across a wide variety of uses, at the expense of a larger output file
+
 ### LIST ARCHIVE FILES (TOP DIRECTORY ONLY) ###
 * tar -ztf `file.tar.gz` | egrep '^[^/]+/?$'
 
