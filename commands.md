@@ -224,7 +224,7 @@ Please note: scripts placed in these cron directories sometimes need their exten
 * tar xvf `something`.tar
 * tar xvfz `something`.tar.gz
 
-### COMPRESS PDF ON MAX/LINUX ###
+### COMPRESS PDF ON MAC/LINUX ###
 _Ghostscript or `gs` must be installed for use. Always check the output file size is smaller than the input file, as this is not always the case_
 
 * gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-"screen"} -dCompatibilityLevel=1.4 -sOutputFile=`output.pdf` `input.pdf`
@@ -234,6 +234,10 @@ _Ghostscript or `gs` must be installed for use. Always check the output file siz
 /printer - print output
 /prepress - pre-press
 /default - output useful across a wide variety of uses, at the expense of a larger output file
+
+### GENERATE PDF ON MAC ###
+
+`/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu --print-to-pdf=<output.pdf> --no-margins --no-pdf-header-footer --disable-pdf-tagging <http://mywebpage.com>`
 
 ### LIST ARCHIVE FILES (TOP DIRECTORY ONLY) ###
 * tar -ztf `file.tar.gz` | egrep '^[^/]+/?$'
